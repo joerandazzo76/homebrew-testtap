@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/bin/bash
 GREEN="\033[32m"
 NC="\033[0m"
 FILE="~/homebrew/bin/brew"
