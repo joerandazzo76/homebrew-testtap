@@ -1,50 +1,7 @@
-#!/bin/bash
-GREEN="\033[32m"
-NC="\033[0m"
-FILE="~/homebrew/bin/brew"
+#!/usr/bin/env ruby
 
-#if ARGV.length == 1
-#	puts "The parmeter is: " << ARGV[0]
-#else
-#	puts "Please enter paramater!"
-#end
-
-if ! [ -f $FILE ]; then
-echo "Installing HomeBrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ARGV.length == 1
+  puts "The parmeter is: " << ARGV[0]
 else
-echo -e "${GREEN}HomeBrew already installed...${NC}"
-fi
-
-echo "Updating brew..."
-brew install phpunit
-brew install wget
-echo "Updating Casks..."
-CASKS=(
-battle-net
-ultimaker-cura
-slic3r
-iterm2
-lastpass
-github
-franz
-private-internet-access
-google-drive
-vlc
-spotify
-visual-studio-code
-docker
-whatsapp
-sublime-text
-iterm2
-qbittorrent
-zoom
-postman
-dbeaver-community
-google-chrome
-)
-brew install ${CASKS[@]} --casks
-echo -e "${GREEN}Done${NC}"
-
-
-
+  puts "Please enter paramater!"
+end
